@@ -14,8 +14,12 @@ export class AdicionarComponent implements OnInit {
   pais:AbstractControl;
   ciudad:AbstractControl
   //nombre:any;
+  /* lista solo toma el mensaje de creacion de cliente*/
   lista:Array<String>=[];
+  /*lista2 tiene la lista de instancias de usuarios */
   Lista2:Array<Usuarios>=ListaUsuarios;
+  /* listac solo toma el mensaje de campos obligatorios*/
+  listac:Array<String>=[];
   constructor(private fb:FormBuilder) { 
 
     this.formulario=this.fb.group({
@@ -46,10 +50,11 @@ export class AdicionarComponent implements OnInit {
       
       nombre:this.nombre.value,
       apellido:this.apellido.value,
-      genero:"otro",
+      genero:this.genero.value,
       pais:this.pais.value,
       ciudad:this.ciudad.value,
     };
+    /*los siguiente 3 if deberian ser redundantes , aun asi preferi dejarlos */
     if(this.genero.value==="hombre"){
       test.genero="hombre";
     }
@@ -59,14 +64,22 @@ export class AdicionarComponent implements OnInit {
     if(this.genero.value==="otro"){
       test.genero="otro";
     }
-    this.lista.push(this.nombre.value);
-    console.log("genero");
-    console.log(this.genero.value);
+    if((test.apellido==="")||(test.nombre==="")||(test.pais==="")||(test.ciudad==="")||(test.genero==="")){
+      this.listac.push("TODOS LOS CAMPOS SON OBLIGATORIOS");
+      /*Por alguna razon incluso si coloco en el html "required" ,o los validators
+      no me cuentan como campos obligatorios, tuve que hacer esta condicional */
+      return;
+    }
+    this.lista.push("CLIENTE AGREGADO");
+
     this.Lista2.push(test);
     this.Cancelar();
+    /*asi se limpian los campos despues de adicionar un cliente */
+    
   }
+  
   Cancelar(){
     this.formulario.reset();
-    
+    /*RESETEA EL FORMULARIO */
   }
 }

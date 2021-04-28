@@ -1,7 +1,10 @@
-<form [formGroup]="formulario" (ngSubmit)="Crear()">
+<form [formGroup]="formulario" >
 <div id="caja0">
     <ul>
-        <li id="mensaje" *ngFor="let item of lista">USUARIO CREADO</li>
+        <!--mensaje 2 es para campos obligatorios-->
+        <!--mensaje  es para creacion de usuario-->
+        <li id="mensaje2" *ngFor="let item of listac">{{item}}</li>
+        <li id="mensaje" *ngFor="let item of lista">{{item}}</li>
     </ul>
     
     <ul>
@@ -12,10 +15,10 @@
         
         <li>
             <label for="apellido">Apellidos</label>
-            <input formControlName="apellido" type="text" >
+            <input formControlName="apellido" type="text" required="true">
         </li>
         <li>
-            <label for="apellido">Genero</label>
+            <label for="genero">Genero</label>
         </li>
         <label class="g">
             <input type="radio" value="hombre" formControlName="genero">
@@ -31,16 +34,16 @@
         </label>
         <li>
             <label for="pais">Pais</label>
-            <input formControlName="pais" type="text" >
+            <input formControlName="pais" type="text"required="true" >
         </li>
         <li>
             <label for="ciudad">Ciudad</label>
-            <input formControlName="ciudad" type="text" >
+            <input formControlName="ciudad" type="text" required="true">
         </li>
         <li>
             
             <button type="button" (click)="Cancelar()">Cancelar</button>
-            <button type="submit" >Crear</button>
+            <button type="submit" (click)="Crear()">Crear</button>
         </li>
     </ul>
 </div> 
