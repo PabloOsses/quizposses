@@ -1,1 +1,25 @@
-<p>header works!</p>
+<div id="tope">
+    <header><img src="assets/img/fff.JPG" alt="" id="normal">Clientes</header>
+    
+</div>
+<div id= "caja1">
+    <a [routerLink]="['/vista']" routerLinkActive="router-link-active" >
+
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+            <span class="vistac">VISTA CARD</span>
+        </button>
+    </a>
+    <a [routerLink]="['/listado']" routerLinkActive="router-link-active" >
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+            <span class="listac">LISTA</span>
+        </button>
+    </a>
+    <a [routerLink]="['/adicionar']" routerLinkActive="router-link-active" >
+        <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+            <span class="adicionarc">adicionar</span>
+        </button>
+    </a>
+</div>

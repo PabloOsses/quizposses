@@ -1,0 +1,34 @@
+#tope{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#normal{
+ width: 30%;
+}
+header{
+    
+    width: 40%;
+    font-size: large;
+}
+#caja1{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#caja1 button{
+    
+    margin: 40px;
+    
+}

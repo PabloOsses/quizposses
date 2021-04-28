@@ -1,0 +1,38 @@
+<form [formGroup]="formulario" (ngSubmit)="Crear()">
+<div id="caja0">
+    <ul>
+        <li *ngFor="let item of lista">{{item}}</li>
+    </ul>
+    
+    <ul>
+        <li>
+            <label for="nombre">Nombres</label>
+            <input formControlName="nombre" type="text" >
+        </li>
+        <li>
+            <label for="nombre">Genero</label>
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Hombre</mat-radio-button>
+                <mat-radio-button value="2">Mujer</mat-radio-button>
+                <mat-radio-button value="3">Otro</mat-radio-button>
+              </mat-radio-group>
+        </li>
+        <li>
+            <label for="nombre">Apellidos</label>
+            <input formControlName="apellido" type="text" >
+        </li>
+        <li>
+            <label for="pais">Pais</label>
+            <input formControlName="pais" type="text" >
+        </li>
+        <li>
+            <label for="ciudad">Ciudad</label>
+            <input formControlName="ciudad" type="text" >
+        </li>
+        <li>
+            <button type="submit" >Crear</button>
+            <button type="button" (click)="Eliminar()">Eliminar</button>
+        </li>
+    </ul>
+</div> 
+</form>
