@@ -7,20 +7,28 @@
     <ul>
         <li>
             <label for="nombre">Nombres</label>
-            <input formControlName="nombre" type="text" >
+            <input formControlName="nombre" type="text" required="true">
         </li>
+        
         <li>
-            <label for="nombre">Genero</label>
-            <mat-radio-group aria-label="Select an option">
-                <mat-radio-button value="1">Hombre</mat-radio-button>
-                <mat-radio-button value="2">Mujer</mat-radio-button>
-                <mat-radio-button value="3">Otro</mat-radio-button>
-              </mat-radio-group>
-        </li>
-        <li>
-            <label for="nombre">Apellidos</label>
+            <label for="apellido">Apellidos</label>
             <input formControlName="apellido" type="text" >
         </li>
+        <li>
+            <label for="apellido">Genero</label>
+        </li>
+        <label class="g">
+            <input type="radio" value="hombre" formControlName="genero">
+            <span>Hombre</span>
+        </label>
+        <label class="g">
+            <input type="radio" value="mujer" formControlName="genero">
+            <span>Mujer</span>
+        </label>
+        <label class="g">
+            <input type="radio" value="otro" formControlName="genero">
+            <span>Otro</span>
+        </label>
         <li>
             <label for="pais">Pais</label>
             <input formControlName="pais" type="text" >
@@ -30,8 +38,9 @@
             <input formControlName="ciudad" type="text" >
         </li>
         <li>
+            
+            <button type="button" (click)="Cancelar()">Cancelar</button>
             <button type="submit" >Crear</button>
-            <button type="button" (click)="Eliminar()">Eliminar</button>
         </li>
     </ul>
 </div> 

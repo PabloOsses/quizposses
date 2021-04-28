@@ -1,13 +1,18 @@
+
 #normal{
-    width: 3%;
+    width: auto;
+    height: auto;
 }
 #vistaa{
     display: flex;
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
-    border-color: black;
+    width: 30%;
+    height: 15%;
+    border: 3px solid rgb(90, 173, 200);
+    border-radius: 5px;
+    margin-bottom: 9px;
 }
 #vistadatos{
     list-style: none;

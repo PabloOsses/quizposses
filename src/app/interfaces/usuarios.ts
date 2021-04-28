@@ -1,5 +1,5 @@
 export interface Usuarios {
-    id:number;
+    
     nombre:string;
     apellido:string;
     genero:string;
@@ -8,27 +8,27 @@ export interface Usuarios {
 }
 export const ListaUsuarios:Array<Usuarios>=[
     {
-        id:1,
-        nombre:"lorenzo ",
-        apellido:"mascarpone",
+        
+        nombre:"Lorenzo ",
+        apellido:"Mascarpone",
         genero:"hombre",
-        pais:"italia",
-        ciudad:"genova",
+        pais:"Italia",
+        ciudad:"Genova",
     },
     {
-        id:2,
+        
         nombre:"Olga ",
-        apellido:"romanov",
+        apellido:"Romanov",
         genero:"mujer",
-        pais:"rusia",
-        ciudad:"moscu"
+        pais:"Rusia",
+        ciudad:"Moscu"
     },
     {
-        id:3,
+       
         nombre:"Boris ",
-        apellido:"toddbringer",
+        apellido:"Toddbringer",
         genero:"hombre",
-        pais:"alemania",
-        ciudad:"midland"
+        pais:"Alemania",
+        ciudad:"Midland"
     }
 ];

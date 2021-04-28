@@ -1,5 +1,11 @@
 <div id="vistaa" *ngFor="let item of Lista">
-    <img src="assets/img/fff.JPG" alt="" id="normal">
+     
+    <img *ngIf="item.genero==='hombre'" src="assets/img/mmm.JPG" alt="" id="normal">
+    
+    
+    <img *ngIf="item.genero==='mujer'" src="assets/img/fff.JPG" alt="" id="normal">
+    
+    <img *ngIf="item.genero==='otro'" src="assets/img/ooo.jpg" alt="" id="normal">
     <ul id="vistadatos" >
         <li>
             {{item.nombre}} {{item.apellido}}
